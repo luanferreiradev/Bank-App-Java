@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bank App - Conta</title>
+</head>
+<body>
+<h1>Detalhes da Conta</h1>
+<p>Número da Conta: <span th:text="${accountNumber}"></span></p>
+<p>Saldo: <span th:text="${balance}"></span></p>
+
+<h2>Consulta de Saldo</h2>
+<form th:action="@{/accounts/check-balance}" th:object="${account}" method="post">
+    <button type="submit">Consultar Saldo</button>
+</form>
+
+<h2>Solicitar Empréstimo</h2>
+<form th:action="@{/accounts/request-loan}" th:object="${loanRequest}" method="post">
+    <label>Valor do Empréstimo:</label>
+    <input type="number" th:field="*{loanAmount}">
+    <button type="submit">Solicitar Empréstimo</button>
+</form>
+
+<p th:text="${loanResult}"></p>
+</body>
+</html>

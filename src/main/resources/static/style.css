@@ -1,0 +1,34 @@
+/* styles.css */
+
+/* Estilos para o formulário */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para os resultados */
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
